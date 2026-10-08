@@ -1,0 +1,48 @@
+; PARAMETROS DE CONTROL DE CORRIDA
+integrator		= steep
+nsteps			= 50000
+; Frecuencias de salida para energías para archivo log y archivo de energía
+nstlog			= 1
+nstenergy		= 1
+; Opciones de minimización de energía
+; Tolerancia de fuerza y tamaño de paso inicial
+emtol			= 10
+emstep			= 0.01
+; Número máximo de iteracines en "relax-shells"
+niter			= 20
+; PARAMETROS DE BUSQUEDA DE VECINOS
+cutoff-scheme           = Verlet
+; Frecuencia de actualización de nblist
+nstlist			= 1
+; Algoritmo de busqueda de vecinos (simple o grid)
+ns_type			= grid
+; Condiciones de frontera periódicas (XYZ o ninguna)
+pbc			= xyz
+; Radio de corte de nblist
+rlist			= 1.2
+; OPCIONES PARA ELECTROSTATICA Y VDW
+; Método para hacer electrostática
+coulombtype		= PME
+; rcoulomb-switch	= 0
+rcoulomb		= 1.2
+; Constante dieléctrica (DC) para radio de corte o DC de campo de reacción
+epsilon-r		= 1
+; Método para hacer VDW
+vdw-type		= cut-off
+; Longitudes de corte
+rvdw			= 1.2
+; Aplicar correcciones de dispersión de largo alcance para energía y presión
+DispCorr		= EnerPres
+; Espaciamiento para la rejilla PME/PPPM FFT
+fourierspacing		= 0.12
+; Tamaño de rejilla FFT, cuando un valor es 0 se usará fourierspacing
+fourier_nx		= 0
+fourier_ny		= 0
+fourier_nz		= 0
+; Parámetros EWALD/PME/PPPM
+pme_order		= 6
+ewald_rtol		= 1e-06
+epsilon_surface	= 0
+;optimize_fft		= no
+; Type of constraint algorithm
+constraint-algorithm    = lincs

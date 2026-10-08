@@ -1,0 +1,18 @@
+; Force-field include shown for reference.
+; The complete GROMOS54A7 force-field directory is not included.
+#include "./gromos54a7.ff/forcefield.itp"
+
+; solute topology (SUT)
+#include "./solute.itp"
+
+; solvent topology (SLV)
+#include "./solvent.itp"
+
+[ system ]
+; Name
+solute solvated by solvent
+
+[ molecules ]
+; Compound      #mols
+SUT		1
+SLV		n_solv
